@@ -1,7 +1,7 @@
 package codechef.ch1803b
 
 class MinEat(val nPile: Int, val nHour: Int, val nBananaInPiles: List<Int>) {
-    val nBananaInLargestPile = nBananaInPiles.max() ?: -1
+    val nBananaInLargestPile = nBananaInPiles.maxOrNull() ?: -1
     val totalBanana = nBananaInPiles.map { it.toLong() }.sum()
 
     fun canEatAll(speed: Int): Boolean {

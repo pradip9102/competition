@@ -1,6 +1,6 @@
-import javafx.util.*;
-
 import java.util.*;
+
+import kotlin.Pair;
 
 public class AdjList {
     private int nodeCount;
@@ -45,7 +45,7 @@ public class AdjList {
         for (int i = 0; i < _adjacencies.size(); i++) {
             System.out.print("adjancencies[" + (i + 1) + "] -> ");
             for (Pair<Integer, Integer> edge : _adjacencies.get(i)) {
-                System.out.print(edge.getKey() + "(" + edge.getValue() + ") ");
+                System.out.print(edge.getFirst() + "(" + edge.getSecond() + ") ");
             }
             System.out.println();
         }

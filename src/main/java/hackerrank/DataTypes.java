@@ -11,16 +11,16 @@ public class DataTypes {
             String str = sc.next();
             boolean isByte = false, isShort = false, isInt = false, isLong = false;
             try {
-                new Long(str);
+                Long.valueOf(str);
                 isLong = true;
 
-                new Integer(str);
+                Integer.valueOf(str);
                 isInt = true;
 
-                new Short(str);
+                Short.valueOf(str);
                 isShort = true;
 
-                new Byte(str);
+                Byte.valueOf(str);
                 isByte = true;
             } catch (Exception e) {
                 if (isByte || isShort || isInt || isLong) {

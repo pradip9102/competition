@@ -18,7 +18,7 @@ fun main(args: Array<String>) {
         var result = 0L
         var impossible = false
         seqs.asReversed().forEach seq@ { array ->
-            val num = array.filter { it < max }.max()
+            val num = array.maxOrNull()
             if (num != null) {
                 max = num
                 result += num

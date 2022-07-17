@@ -15,7 +15,7 @@ fun main(args: Array<String>) {
         var e = exponent
         var b = base.mod(modulus)
         while (e > 0) {
-            if (e.mod(2) != 0L) {
+            if (e.mod(2) != 0) {
                 result = (result * b).mod(modulus)
             }
             e = e shr 1
