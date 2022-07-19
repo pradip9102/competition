@@ -1,12 +1,6 @@
 package codechef.ch1801
 
-class StrMrg {
-}
-
-fun main(args: Array<String>) {
-    fun readIntArray(): List<Int> {
-        return readLine()!!.split(" ").filter { it.isNotEmpty() }.map { it.toInt() }
-    }
+fun main() {
 
     fun readInt(): Int {
         return readLine()!!.toInt()
@@ -27,10 +21,7 @@ fun main(args: Array<String>) {
     }
 
     val t = readInt()
-    (1..t).forEach {
-        val line1 = readIntArray()
-        val n = line1[0]
-        val m = line1[1]
+    repeat(t) {
         val strA = readLine()!!
         val strB = readLine()!!
 

@@ -26,13 +26,13 @@ class Prgcup01 {
     }
 }
 
-fun main(args: Array<String>) {
-    (0 until readLine()!!.toInt()).forEach {
+fun main() {
+    repeat(readLine()!!.toInt()) {
         val line = readLine()!!.split(" ").filter { it.isNotEmpty() }
-        val f1 = line[0][0].toInt() - 'a'.toInt() + 1
-        val r1 = line[0][1].toInt() - '1'.toInt() + 1
-        val f2 = line[1][0].toInt() - 'a'.toInt() + 1
-        val r2 = line[1][1].toInt() - '1'.toInt() + 1
+        val f1 = line[0][0].code - 'a'.code + 1
+        val r1 = line[0][1].code - '1'.code + 1
+        val f2 = line[1][0].code - 'a'.code + 1
+        val r2 = line[1][1].code - '1'.code + 1
 
         println(Prgcup01.minMoves(f1, r1, f2, r2))
     }

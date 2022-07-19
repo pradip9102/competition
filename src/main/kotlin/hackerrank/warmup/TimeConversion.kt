@@ -2,7 +2,7 @@ package hackerrank.warmup
 
 import java.util.*
 
-fun main(args: Array<String>) {
+fun main() {
     val scanner = Scanner(System.`in`)
     val normalTime = scanner.nextLine().trim()
     val normalHour = normalTime.substring(0..1)

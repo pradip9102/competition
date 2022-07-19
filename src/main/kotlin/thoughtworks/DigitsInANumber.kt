@@ -6,20 +6,20 @@ class DigitsInANumber {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val digitCounts by lazy {
         return@lazy (1..39).map { DigitsInANumber.totalNumbersWithinDigit(it) }
     }
 
-    (0 until readLine()!!.toInt()).forEach {
+    repeat(readLine()!!.toInt()) {
         val num = readLine()!!.toLong()
-        var result: Int = 0
+        var result = 0
         for (i in digitCounts.indices) {
             ++result
             if (num <= digitCounts[i]) {
                 break
             }
         }
-        println(result-1)
+        println(result - 1)
     }
 }

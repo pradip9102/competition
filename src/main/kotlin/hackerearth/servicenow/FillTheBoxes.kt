@@ -2,12 +2,9 @@ package hackerearth.servicenow
 
 import java.util.*
 
-class FillTheBoxes {
-}
-
-fun main(args: Array<String>) {
+fun main() {
     val scanner = Scanner(System.`in`)
-    (0 until scanner.nextInt()).forEach { _ ->
+    repeat(scanner.nextInt()) {
         val boxCount = scanner.nextInt()
         val ballCount = scanner.nextInt()
         val tolerance = scanner.nextInt()
@@ -26,7 +23,7 @@ fun main(args: Array<String>) {
 
         var boxIndex = 0
         var ballIndex = 0
-        var filledBoxCount = 0;
+        var filledBoxCount = 0
         while (boxIndex < boxCount && ballIndex < ballCount) {
             if ((capacities[boxIndex] <= weights[ballIndex]) && (weights[ballIndex] <= capacities[boxIndex] + tolerance)) {
                 ++filledBoxCount

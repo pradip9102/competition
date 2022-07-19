@@ -1,17 +1,12 @@
 package codechef.ch1804b
 
-class AvgPr {
-}
-
-data class Element(val value: Int, var count: Int)
-
-fun main(args: Array<String>) {
+fun main() {
     fun readIntList(delimiter: String = " "): List<Int> {
         return readLine()!!.split(delimiter).filter { it.isNotEmpty() }.map { it.toInt() }
     }
 
-    (0 until readLine()!!.toInt()).forEach { t ->
-        val len = readLine()!!.toInt()
+    repeat(readLine()!!.toInt()) {
+        readLine()!!.toInt()
         val sequence = readIntList()
 
         val evens = mutableListOf<Int>()
@@ -32,23 +27,22 @@ fun main(args: Array<String>) {
         }
 
         var result = 0
-        for (i in evens.indices) {
-            for (j in evens.indices.filter { it > i }) {
-                val avg = (evens[i] + evens[j]) / 2
-                if (counts[avg] != null) {
-                    ++result
-                }
-            }
-        }
-        for (i in odds.indices) {
-            for (j in odds.indices.filter { it > i }) {
-                val avg = (odds[i] + odds[j]) / 2
-                if (counts[avg] != null) {
-                    ++result
-                }
-            }
-        }
+        result = countAvg(evens, counts, result)
+        result = countAvg(odds, counts, result)
 
         println(result)
     }
+}
+
+private fun countAvg(evens: MutableList<Int>, counts: HashMap<Int, Int>, result: Int): Int {
+    var result1 = result
+    for (i in evens.indices) {
+        for (j in evens.indices.filter { it > i }) {
+            val avg = (evens[i] + evens[j]) / 2
+            if (counts[avg] != null) {
+                ++result1
+            }
+        }
+    }
+    return result1
 }

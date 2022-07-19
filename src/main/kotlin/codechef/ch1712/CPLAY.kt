@@ -44,7 +44,7 @@ class CPLAY {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val game = CPLAY()
     while (true) {
         val turn = readLine() ?: return

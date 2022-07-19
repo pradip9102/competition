@@ -2,10 +2,10 @@ package codechef.ch1712
 
 class Dsantap {
     companion object {
-        val END_COMMUNICATION = 0
-        val TRAVEL_TO_HOUSE = 1
-        val PUT_PRESENT_TO_BAG = 2
-        val TAKE_PRESENT_FROM_BAG = 3
+        const val END_COMMUNICATION = 0
+        const val TRAVEL_TO_HOUSE = 1
+        const val PUT_PRESENT_TO_BAG = 2
+        const val TAKE_PRESENT_FROM_BAG = 3
 
         fun squaredDistance(child1: Child, child2: Child): Int {
             val distX = child1.posX - child2.posX
@@ -28,7 +28,7 @@ class GiftBag(val capacity: Int, val distinctPresentCount: Int, val volumes: Lis
     val gifts = mutableListOf<Int>()
 }
 
-fun main(args: Array<String>) {
+fun main() {
     (0 until readLine()!!.toInt()).forEach {
         val children = mutableListOf<Child>()
 
@@ -51,5 +51,6 @@ fun main(args: Array<String>) {
             val distance = Dsantap.squaredDistance(children[0], children.last())
             if (distance > maxDistance) maxDistance = distance
         }
+        println(giftBag)
     }
 }

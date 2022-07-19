@@ -2,7 +2,7 @@ package hackerrank.warmup
 
 import java.util.*
 
-fun main(args: Array<String>) {
+fun main() {
     val scanner = Scanner(System.`in`)
     val array = scanner.nextLine().trim().split(" ").map { it.toLong() }
     val total = array.sum()

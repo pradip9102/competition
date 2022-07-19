@@ -1,14 +1,11 @@
 package codechef.ch1801
 
-class Maxsc {
-}
-
-fun main(args: Array<String>) {
+fun main() {
     fun readIntArray(): List<Int> {
         return readLine()!!.split(" ").filter { it.isNotEmpty() }.map { it.toInt() }
     }
 
-    (1..readLine()!!.toInt()).forEach {
+    repeat(readLine()!!.toInt()) {
         val seqs: MutableList<List<Int>> = mutableListOf()
         (1..readLine()!!.toInt()).forEach {
             seqs.add(readIntArray())
@@ -17,7 +14,7 @@ fun main(args: Array<String>) {
         var max = Int.MAX_VALUE
         var result = 0L
         var impossible = false
-        seqs.asReversed().forEach seq@ { array ->
+        seqs.asReversed().forEach seq@{ array ->
             val num = array.maxOrNull()
             if (num != null) {
                 max = num
@@ -30,5 +27,6 @@ fun main(args: Array<String>) {
 
         // print result
         println(if (impossible) -1 else result)
+        println(max)
     }
 }

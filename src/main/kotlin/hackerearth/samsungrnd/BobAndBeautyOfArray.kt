@@ -42,16 +42,16 @@ class BobAndBeautyOfArray {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     // read inputs
-    val length = readLine()!!.toInt()
+    readLine()!!.toInt()
     val array = readLine()!!.split(" ").filter { it.isNotEmpty() }.map { it.toInt() }
 
     // count elements
-    val counts = IntArray(1001, { 0 })
+    val counts = IntArray(1001) { 0 }
     array.forEach { ++counts[it] }
     val elemCounts = IntArray(counts.size)
-    for (i in 0 until counts.size) {
+    for (i in counts.indices) {
         elemCounts[i] = counts[i] + (if (i > 0) elemCounts[i - 1] else 0)
     }
 

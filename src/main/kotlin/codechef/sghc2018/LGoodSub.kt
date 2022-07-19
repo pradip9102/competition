@@ -2,12 +2,9 @@ package codechef.sghc2018
 
 import java.util.*
 
-class LGoodSub {
-}
-
-fun main(args: Array<String>) {
+fun main() {
     val scanner = Scanner(System.`in`)
-    for (t in 0 until scanner.nextInt()) {
+    repeat(scanner.nextInt()) {
         val n = scanner.nextInt()
         val max = ArrayList<Int>(n)
         val array = ArrayList<Int>(n)
@@ -24,7 +21,7 @@ fun main(args: Array<String>) {
                 if (maxLen < len) {
                     maxLen = len
                 }
-                if (i > 0 && array[max[i-1]] >= array[j]) {
+                if (i > 0 && array[max[i - 1]] >= array[j]) {
                     i = max[i - 1]
                 } else {
                     break

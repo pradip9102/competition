@@ -2,12 +2,12 @@ package hackerrank.weekofcode37
 
 import java.util.*
 
-fun main(args: Array<String>) {
+fun main() {
     val scanner = Scanner(System.`in`)
 
     val n = scanner.nextLine().trim().toInt()
     var x = 0L
-    (0 until n).forEach {
+    repeat(n) {
         val params = scanner.nextLine().trim().split(" ")
         val command = params[0]
         val y = params[1].toInt()

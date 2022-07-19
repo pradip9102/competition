@@ -21,10 +21,10 @@ class ShkNum {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val scanner = Scanner(System.`in`)
 
-    (1..scanner.nextInt()).forEach {
+    repeat(scanner.nextInt()) {
         val num = scanner.nextInt()
         val firstMsb = ShkNum.findPosOfMsb(num)
         val secondMsb = ShkNum.findPosOfMsb(num and (1 shl firstMsb).inv())

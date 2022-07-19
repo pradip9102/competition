@@ -2,15 +2,12 @@ package codechef.gsjan18
 
 import java.util.*
 
-class GsJanC {
-}
-
-fun main(args: Array<String>) {
+fun main() {
     fun readIntArray(): List<Int> {
         return readLine()!!.split(" ").filter { it.isNotEmpty() }.map { it.toInt() }
     }
 
-    (0 until readLine()!!.toInt()).forEach {
+    repeat(readLine()!!.toInt()) {
         val targets = readIntArray()
         val cityCount = targets[0]
         val roadCount = targets[1]
@@ -20,13 +17,13 @@ fun main(args: Array<String>) {
         // initialize
         val nextCities: MutableList<MutableList<Int>> = mutableListOf()
         val visited: MutableList<Boolean> = mutableListOf()
-        (0..cityCount).forEach { i ->
+        repeat(cityCount) {
             nextCities.add(mutableListOf())
             visited.add(false)
         }
 
         // read road map
-        (0 until roadCount).forEach {
+        repeat(roadCount) {
             val se = readIntArray()
             nextCities[se[0]].add(se[1])
             nextCities[se[1]].add(se[0])

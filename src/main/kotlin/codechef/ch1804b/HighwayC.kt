@@ -1,14 +1,11 @@
 package codechef.ch1804b
 
-class HighwayC {
-}
-
-fun main(args: Array<String>) {
+fun main() {
     fun readIntList(delimiter: String = " "): List<Int> {
         return readLine()!!.split(delimiter).filter { it.isNotEmpty() }.map { it.toInt() }
     }
 
-    (0 until readLine()!!.toInt()).forEach {
+    repeat(readLine()!!.toInt()) {
         val line1 = readIntList()
         val nLanes = line1[0]
         val walkingSpeed = line1[1]

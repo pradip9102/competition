@@ -44,11 +44,11 @@ class Mathematics {
 }
 
 
-fun main(args: Array<String>) {
+fun main() {
     val math = Mathematics()
     val num = 59
-//    println("$num is ${if (math.isPrime(num)) "" else "not "}a prime number.")
-//    println(math.sievePrime(num).joinToString())
+    println("$num is ${if (math.isPrime(num)) "" else "not "}a prime number.")
+    println(math.sievePrime(num).joinToString())
 
     println(Integer.parseInt("123", 8))
     println(math.multiplyByTen(83))

@@ -1,6 +1,6 @@
 package hackerearth.januaryCircuits18
 
-fun main(args: Array<String>) {
+fun main() {
     fun readIntArray(): List<Int> {
         return readLine()!!.split(" ").filter { it.isNotEmpty() }.map { it.toInt() }
     }

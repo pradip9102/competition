@@ -1,9 +1,6 @@
 package codechef.ch1712
 
-class GIT01 {
-}
-
-fun main(args: Array<String>) {
+fun main() {
     val nTest = readLine()!!.toInt()
     for (t in 0 until nTest) {
         val dimension = readLine()!!

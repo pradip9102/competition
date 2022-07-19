@@ -1,17 +1,14 @@
 package codechef.ch1803b
 
-class BigSale {
-}
-
-fun main(args: Array<String>) {
+fun main() {
     fun readIntArray(): List<Int> {
         return readLine()!!.split(" ").filter { it.isNotEmpty() }.map { it.toInt() }
     }
 
-    (1..readLine()!!.toInt()).forEach {
+    repeat(readLine()!!.toInt()) {
         val nRecipes = readLine()!!.toInt()
         var totalLoss = 0.0
-        (1..nRecipes).forEach {
+        repeat(nRecipes) {
             val productDetails = readIntArray()
             val price = productDetails[0]
             val quantity = productDetails[1]

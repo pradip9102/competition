@@ -29,7 +29,7 @@ class VK18 {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val problem = VK18()
     for (t in 0 until readLine()!!.toInt()) {
         println(problem.getDiamondsInHouse(readLine()!!.toInt()))

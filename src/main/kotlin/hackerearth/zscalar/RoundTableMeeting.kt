@@ -53,7 +53,7 @@ class RoundTableMeeting {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val problem = RoundTableMeeting()
     problem.solve()
 }

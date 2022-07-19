@@ -35,7 +35,7 @@ class MinVote(private val nMinion: Int, private val strengths: IntArray) {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     fun readIntArray(): IntArray {
         return readLine()!!.split(" ").filter { it.isNotEmpty() }.map { it.toInt() }.toIntArray()
     }

@@ -1,9 +1,6 @@
 package thoughtworks
 
-class CompareStrings {
-}
-
-fun main(args: Array<String>) {
+fun main() {
     fun readInts() = readLine()!!.split(" ").filter { it.isNotEmpty() }.map { it.toInt() }
     val line1 = readInts()
     val charCount = line1[0]

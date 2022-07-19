@@ -1,5 +1,7 @@
 package codechef.proc17
 
+import java.util.*
+
 class Prgcup03 {
     companion object {
         val AKIRA = "akira"
@@ -8,12 +10,12 @@ class Prgcup03 {
     }
 }
 
-enum class Weapon(type: String) {
-    SCISSORS("scissors"),
-    PAPER("paper"),
-    ROCK("rock"),
-    MOON("moon"),
-    SUN("sun");
+enum class Weapon {
+    SCISSORS,
+    PAPER,
+    ROCK,
+    MOON,
+    SUN;
 }
 
 infix fun Weapon.beats(other: Weapon): Boolean? = when {
@@ -30,11 +32,11 @@ infix fun Weapon.beats(other: Weapon): Boolean? = when {
     else -> null
 }
 
-fun main(args: Array<String>) {
-    (0 until readLine()!!.toInt()).forEach {
+fun main() {
+    repeat(readLine()!!.toInt()) {
         val line = readLine()!!.split(" ")
-        val weapon1 = Weapon.valueOf(line[0].toUpperCase())
-        val weapon2 = Weapon.valueOf(line[1].toUpperCase())
+        val weapon1 = Weapon.valueOf(line[0].uppercase(Locale.getDefault()))
+        val weapon2 = Weapon.valueOf(line[1].uppercase(Locale.getDefault()))
 
         if (weapon1 beats weapon2 == true) {
             println(Prgcup03.AKIRA)

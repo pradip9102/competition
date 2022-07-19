@@ -20,7 +20,7 @@ class BuyingStock(private val nDay: Int, private val diffs: IntArray) {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     fun readIntArray(): IntArray {
         return readLine()!!.split(" ").filter { it.isNotEmpty() }.map { it.toInt() }.toIntArray()
     }

@@ -1,14 +1,11 @@
 package codechef.ch1803b
 
-class CheGlove {
-}
-
-fun main(args: Array<String>) {
+fun main() {
     fun readIntArray(): List<Int> {
         return readLine()!!.split(" ").filter { it.isNotEmpty() }.map { it.toInt() }
     }
 
-    (1..readLine()!!.toInt()).forEach {
+    repeat(readLine()!!.toInt()) {
         val nFinger = readLine()!!.toInt()
         val fingerLengths = readIntArray()
         val sheathLengths = readIntArray()
@@ -16,7 +13,7 @@ fun main(args: Array<String>) {
         var front = true
         var back = true
 
-        (0..(nFinger - 1)).forEach { i ->
+        (0 until nFinger).forEach { i ->
             if (front) {
                 front = fingerLengths[i] <= sheathLengths[i]
             }

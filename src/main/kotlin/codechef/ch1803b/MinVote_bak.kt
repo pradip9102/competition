@@ -29,7 +29,7 @@ class MinVote_bak(val nMinions: Int = 0,
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     fun readIntArray(): List<Int> {
         return readLine()!!.split(" ").filter { it.isNotEmpty() }.map { it.toInt() }
     }

@@ -6,10 +6,7 @@ enum class WorkerType(val typeId: Int) {
     AUTHOR_TRANSLATOR(3);
 }
 
-class ChefWork {
-}
-
-fun main(args: Array<String>) {
+fun main() {
     fun readIntList(delimiter: String = " "): List<Int> {
         return readLine()!!.split(delimiter).filter { it.isNotEmpty() }.map { it.toInt() }
     }

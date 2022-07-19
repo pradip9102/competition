@@ -33,17 +33,17 @@ class MatrComb {
             // Multiply modulo inverse of all numbers from (n+1)
             // to p
             for (i in n + 1 until p)
-                res = res * Companion.modInverse(i, p) % p
+                res = res * modInverse(i, p) % p
             return res
         }
     }
 }
 
-fun main(args: Array<String>) {
-    val limit = 1000000007;
+fun main() {
+    val limit = 1000000007
     val scanner = Scanner(System.`in`)
     val n = scanner.nextInt()
     val numerator = MatrComb.modFact(n * n, limit)
     val denominator = MatrComb.modFact(n + 2, limit) * MatrComb.modFact((n + 1) * (n - 2), limit)
-    val result = MatrComb.modDivide(numerator, denominator % limit, limit);
+    MatrComb.modDivide(numerator, denominator % limit, limit)
 }

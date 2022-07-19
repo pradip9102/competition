@@ -2,12 +2,9 @@ package hackerearth.dell
 
 import java.util.*
 
-class OneSwapToPalindrome {
-}
-
-fun main(args: Array<String>) {
+fun main() {
     val scanner = Scanner(System.`in`)
-    (0 until scanner.nextInt()).forEach {
+    repeat(scanner.nextInt()) {
         val str = scanner.next()!!
         var diffCount = 0
         var k1 = 0

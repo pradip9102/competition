@@ -16,7 +16,7 @@ class XXor(elements: List<Int>) {
     private fun countOnes(li: Int, ri: Int, bi: Int) = if (li == 0) totalOnes[ri][bi] else (totalOnes[ri][bi] - totalOnes[li - 1][bi])
 }
 
-fun main(args: Array<String>) {
+fun main() {
     fun readIntArray(): List<Int> {
         return readLine()!!.split(" ").filter { it.isNotEmpty() }.map { it.toInt() }
     }
@@ -24,7 +24,7 @@ fun main(args: Array<String>) {
     val line1 = readIntArray()
     val nQuery = line1[1]
     val pchef = XXor(readIntArray())
-    (0 until nQuery).forEach {
+    repeat(nQuery) {
         val query = readIntArray()
         val li = query[0] - 1
         val ri = query[1] - 1

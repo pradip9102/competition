@@ -1,9 +1,6 @@
 package codechef.proc17
 
-class Prgcup02 {
-}
-
-fun main(args: Array<String>) {
+fun main() {
     fun gcd(a: Int, b: Int): Int = when {
         a == 0 || b == 0 -> 0
         a == b -> a
@@ -11,7 +8,7 @@ fun main(args: Array<String>) {
         else -> gcd(a, b - a)
     }
 
-    (0 until readLine()!!.toInt()).forEach {
+    repeat(readLine()!!.toInt()) {
         val line1 = readLine()!!.split(" ").filter { it.isNotEmpty() }.map { it.toInt() }.sorted()
         val x = line1[0]
         val y = line1[1]

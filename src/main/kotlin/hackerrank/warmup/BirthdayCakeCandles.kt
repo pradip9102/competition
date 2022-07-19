@@ -2,9 +2,9 @@ package hackerrank.warmup
 
 import java.util.*
 
-fun main(args: Array<String>) {
+fun main() {
     val scanner = Scanner(System.`in`)
-    val age = scanner.nextLine().trim().toInt()
+    scanner.nextLine().trim().toInt()
     val heights = scanner.nextLine().trim().split(" ").map { it.toInt() }
 
     var max = Int.MIN_VALUE

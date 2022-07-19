@@ -8,20 +8,20 @@ class Elevator(val maxFloor: Int, val maxPerson: Int, val maxWeight: Int) {
     fun isOverloaded() = (person > maxPerson) || (weight > maxWeight)
 }
 
-fun main(args: Array<String>) {
+fun main() {
     fun readIntArray(): IntArray {
         return readLine()!!.split(" ").filter { it.isNotEmpty() }.map { it.toInt() }.toIntArray()
     }
 
-    (0 until readLine()!!.toInt()).forEach {
+    repeat(readLine()!!.toInt()) {
         val maxFloor = readLine()!!.toInt()
         val line2 = readIntArray()
         val elevator = Elevator(maxFloor, line2[0], line2[1])
 
         val nPersonEntering = readIntArray()
-        val nPersonLeaving = IntArray(elevator.maxFloor, { 0 })
-        val weightEntering = IntArray(elevator.maxFloor, { 0 })
-        val weightLeaving = IntArray(elevator.maxFloor, { 0 })
+        val nPersonLeaving = IntArray(elevator.maxFloor) { 0 }
+        val weightEntering = IntArray(elevator.maxFloor) { 0 }
+        val weightLeaving = IntArray(elevator.maxFloor) { 0 }
 
         (1 until elevator.maxFloor).forEach { currFloor ->
             val desiredFloors = readIntArray()

@@ -26,7 +26,7 @@ class SpellBob {
 }
 
 
-fun main(args: Array<String>) {
+fun main() {
     val scanner = Scanner(System.`in`)
 
     for (t in scanner.nextInt() downTo 1) {
@@ -35,7 +35,7 @@ fun main(args: Array<String>) {
 
         val front = scanner.next()
         val back = scanner.next()
-        for (i in 0 until front.length) {
+        for (i in front.indices) {
             if (front[i] == 'b') {
                 bList.add(i)
             }

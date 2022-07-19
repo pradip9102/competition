@@ -1,15 +1,12 @@
 package codechef.ch1803b
 
-class MixColor {
-}
-
-fun main(args: Array<String>) {
+fun main() {
     fun readIntArray(): List<Int> {
         return readLine()!!.split(" ").filter { it.isNotEmpty() }.map { it.toInt() }
     }
 
-    (1..readLine()!!.toInt()).forEach {
-        val nColors = readLine()!!.toInt()
+    repeat(readLine()!!.toInt()) {
+        readLine()!!.toInt()
         val colorValues = readIntArray()
         var minOpCount = 0
 

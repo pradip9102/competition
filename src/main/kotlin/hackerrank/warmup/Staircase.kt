@@ -2,7 +2,7 @@ package hackerrank.warmup
 
 import java.util.*
 
-fun main(args: Array<String>) {
+fun main() {
     val scanner = Scanner(System.`in`)
     val n = scanner.nextLine().trim().toInt()
     for (i in 1..n) {

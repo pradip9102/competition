@@ -1,15 +1,12 @@
 package codechef.ch1804b
 
-class GoodPref {
-}
-
-fun main(args: Array<String>) {
+fun main() {
     @Suppress("UNCHECKED_CAST")
     fun <T> readList(delimiter: String = " "): List<T> {
         return readLine()!!.split(delimiter).filter { it.isNotEmpty() }.map { it as T }
     }
 
-    (0 until readLine()!!.toInt()).forEach {
+    repeat(readLine()!!.toInt()) {
         val params = readList<String>()
         val str = params[0]
         var iteration = params[1].toInt()

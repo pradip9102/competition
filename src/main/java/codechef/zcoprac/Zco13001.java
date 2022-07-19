@@ -21,13 +21,13 @@ public class Zco13001 {
         strengths.sort(Integer::compareTo);
 //        System.out.println(strengths);
 
-        // total revenue = Σ[i * (n-i) * diff(i+1, i)]    where 1 <= i < n for 1-based indexing
+        // total revenue = sumOfAll[i * (n-i) * diff(i+1, i)]    where 1 <= i < n for 1-based indexing
         long totalRevenue = 0L;
 //        for (int i = 1; i < teamCount; i++) {
 //            totalRevenue += i * (teamCount - i) * (strengths.get(i + 1) - strengths.get(i));
 //        }
         for (int i = 1; i <= teamCount; i++) {
-            totalRevenue += (2 * i - 1 - teamCount) * strengths.get(i);
+            totalRevenue += (2L * i - 1 - teamCount) * strengths.get(i);
         }
 
         // print result

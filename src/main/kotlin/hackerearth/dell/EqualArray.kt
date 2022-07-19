@@ -2,17 +2,15 @@ package hackerearth.dell
 
 import java.util.*
 import kotlin.collections.HashMap
+import kotlin.math.abs
 
-class EqualArray {
-}
-
-fun main(args: Array<String>) {
+fun main() {
     val scanner = Scanner(System.`in`)
-    (0 until scanner.nextInt()).forEach {
+    repeat(scanner.nextInt()) {
         val length = scanner.nextInt()
 
         val found = HashMap<Int, Boolean>()
-        val summedArray = LongArray(length + 1, { 0 })
+        val summedArray = LongArray(length + 1) { 0 }
         for (i in 1..length) {
             val num = scanner.nextInt()
             found[num] = true
@@ -23,7 +21,7 @@ fun main(args: Array<String>) {
         for (j in 1..length) {
             val leftSum = summedArray[j] - summedArray[0]
             val rightSum = summedArray[length] - summedArray[j]
-            val diff = Math.abs(leftSum - rightSum)
+            val diff = abs(leftSum - rightSum)
             if (found[diff.toInt()] == true && diff < result) {
                 //println("$leftSum $rightSum")
                 result = diff.toInt()

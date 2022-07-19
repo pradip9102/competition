@@ -37,7 +37,7 @@ class CompoundWord {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val s = Scanner(System.`in`)
     val problem = CompoundWord()
 

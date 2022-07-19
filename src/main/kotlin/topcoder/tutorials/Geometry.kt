@@ -92,9 +92,9 @@ class Geometry {
      */
 }
 
-fun main(args: Array<String>) {
-    val r1 = Rectangle(1, 1, 3, 3)
-    val r2 = Rectangle(2, 2, 4, 4)
+fun main() {
+    Rectangle(1, 1, 3, 3)
+    Rectangle(2, 2, 4, 4)
 
     val f1 = Fraction(4, 9)
     val f2 = Fraction(1, 6)

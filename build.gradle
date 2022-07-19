@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlin_version = '1.6.10'
+    ext.kotlin_version = '1.6.21'
 
     repositories {
         mavenCentral()
@@ -14,7 +14,6 @@ apply plugin: 'kotlin'
 
 group 'com.vizurd.tryout'
 version '0.0.1'
-sourceCompatibility = '17'
 
 repositories {
     mavenCentral()

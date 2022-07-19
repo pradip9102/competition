@@ -4,7 +4,7 @@ class AdjacencyList(nodeCount: Int = 0) {
     private val _adjacencies = arrayListOf<LinkedList<Pair<Int, Int>>>()
 
     init {
-        (0 until nodeCount).forEach { i ->
+        repeat(nodeCount) {
             _adjacencies.add(LinkedList())
         }
     }
@@ -44,7 +44,7 @@ class AdjacencyList(nodeCount: Int = 0) {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val s = Scanner(System.`in`)
 
     val nodes = s.nextInt()

@@ -35,14 +35,14 @@ class PshTrg(private val sides: IntArray) {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     fun readIntArray(): IntArray {
         return readLine()!!.split(" ").filter { it.isNotEmpty() }.map { it.toInt() }.toIntArray()
     }
 
     val line1 = readIntArray()
     val pchef = PshTrg(readIntArray())
-    (0 until line1[1]).forEach {
+    repeat(line1[1]) {
         val query = readIntArray()
         when (query[0]) {
             1 -> pchef.set(query[1], query[2])

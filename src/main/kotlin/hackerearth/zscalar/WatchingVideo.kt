@@ -22,7 +22,7 @@ class WatchingVideo {
                         avgReceivedPackets.add(if (i == 0) {
                             size.toDouble()
                         } else {
-                            (avgReceivedPackets[i].toDouble() * (i.toDouble() / (i + 1).toDouble())) + (size.toDouble() / (i + 1).toDouble())
+                            (avgReceivedPackets[i] * (i.toDouble() / (i + 1).toDouble())) + (size.toDouble() / (i + 1).toDouble())
                         })
                     }
                 }
@@ -41,7 +41,7 @@ class WatchingVideo {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val problem = WatchingVideo()
     problem.solve()
 }

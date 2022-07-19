@@ -30,7 +30,7 @@ public class HappinessTour {
                 adjList.addEdge(uCities.get(i), vCities.get(i), 0);
                 adjList.addEdge(vCities.get(i), uCities.get(i), 0);
             }
-            adjList.printAdjacencies();
+            adjList.print(adjList._adjacencies);
         }
     }
 
@@ -73,10 +73,10 @@ public class HappinessTour {
             return _adjacencies.get(startNode).contains(new Pair<>(endNode, weight));
         }
 
-        void printAdjacencies() {
-            for (int i = 0; i < _adjacencies.size(); i++) {
+        void print(List<LinkedList<Pair<Integer, Integer>>> adjacencyList) {
+            for (int i = 0; i < adjacencyList.size(); i++) {
                 System.out.print("adjancencies[" + (i + 1) + "] -> ");
-                for (Pair<Integer, Integer> edge : _adjacencies.get(i)) {
+                for (Pair<Integer, Integer> edge : adjacencyList.get(i)) {
                     System.out.print(edge.getFirst() + "(" + edge.getSecond() + ") ");
                 }
                 System.out.println();

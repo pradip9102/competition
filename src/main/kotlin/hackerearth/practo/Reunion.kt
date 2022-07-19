@@ -35,21 +35,20 @@ class Reunion(private val bits: MutableList<Boolean>) {
     }
 }
 
-fun main(args: Array<String>) {
-    var n = 0
+fun main() {
     var k = 0
     readLine()!!
             .split(" ")
             .filter { it.isNotEmpty() }
             .forEachIndexed { i, param ->
                 when (i) {
-                    0 -> n = param.toInt()
+                    0 -> param.toInt()
                     1 -> k = param.toInt()
                     else -> println("Error: Expected 0<=i<=1, but found i=$i")
                 }
             }
 
-    var bits = readLine()!!
+    val bits = readLine()!!
             .asSequence()
             .map { it == '1' }
             .toMutableList()
@@ -57,7 +56,7 @@ fun main(args: Array<String>) {
     val problem = Reunion(bits)
     var globalMax = problem.countMaxUnion()
 
-    (1..k).forEach {
+    repeat(k) {
         // read query
         val query = readLine()!!
                 .split(" ")
@@ -66,10 +65,10 @@ fun main(args: Array<String>) {
                 .toList()
 
         when (query[0]) {
-        // print global max
+            // print global max
             1 -> println(globalMax)
 
-        // mutate and recalculate global max
+            // mutate and recalculate global max
             2 -> {
                 bits[query[1] - 1] = true
                 val localMax = problem.countMaxUnion(query[1])

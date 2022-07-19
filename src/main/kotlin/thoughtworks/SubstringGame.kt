@@ -1,11 +1,8 @@
 package thoughtworks
 
-class SubstringGame {
-}
-
-fun main(args: Array<String>) {
+fun main() {
     val str = readLine()!!
-    val q = readLine()!!.toInt()
+    readLine()!!.toInt()
     val maxIndex = if (str.length % 2 == 0) {
         (str.length / 2) * (str.length + 1)
     } else {

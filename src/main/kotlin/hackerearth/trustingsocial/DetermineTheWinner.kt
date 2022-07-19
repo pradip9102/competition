@@ -1,12 +1,9 @@
 package hackerearth.trustingsocial
 
-class DetermineTheWinner {
-}
-
-fun main(args: Array<String>) {
+fun main() {
     fun readInts() = readLine()!!.split(" ").filter { it.isNotEmpty() }.map { it.toInt() }
 
-    (0 until readLine()!!.toInt()).forEach { _ ->
+    repeat(readLine()!!.toInt()) {
         val initialScoresLine = readInts()
         val decreaseRatesLine = readInts()
         val flashSubmissionsLine = readInts()

@@ -1,9 +1,6 @@
 package codechef.ch1801
 
-class Kcon {
-}
-
-fun main(args: Array<String>) {
+fun main() {
     fun readIntArray(): List<Int> {
         return readLine()!!.split(" ").filter { it.isNotEmpty() }.map { it.toInt() }
     }
@@ -60,7 +57,7 @@ fun main(args: Array<String>) {
 
     (0 until readLine()!!.toInt()).forEach {
         val line1 = readIntArray()
-        val n = line1[0]
+        line1[0]
         val k = line1[1]
         val a = readIntArray()
 

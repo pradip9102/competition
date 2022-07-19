@@ -1,7 +1,5 @@
 package codechef.ch1803b
 
-import java.util.*
-
 
 data class Node(
         val id: Int,
@@ -30,7 +28,6 @@ class EmbdTree(val nNode: Int) {
     fun findFirstNode() = nodes.first { it.count == 1 }
 
     fun buildTree() {
-        val tree = PriorityQueue<Node>(nNode, { o1, o2 -> o1.id.compareTo(o2.id) })
     }
 
     fun getDistance(node1: Node, node2: Node): Double {
@@ -40,13 +37,13 @@ class EmbdTree(val nNode: Int) {
     }
 }
 
-fun main(args: Array<String>) {
+fun main() {
     fun readIntArray(): IntArray {
         return readLine()!!.split(" ").filter { it.isNotEmpty() }.map { it.toInt() }.toIntArray()
     }
 
     val pchef = EmbdTree(readLine()!!.toInt())
-    (1 until pchef.nNode).forEach {
+    repeat(pchef.nNode) {
         val line = readIntArray()
         pchef.addEdge(Edge(pchef.nodes[line[0] - 1], pchef.nodes[line[1] - 1], line[2]))
     }
